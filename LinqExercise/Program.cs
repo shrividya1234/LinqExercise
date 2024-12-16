@@ -69,10 +69,16 @@ namespace LinqExercise
             //TODO: Add an employee to the end of the list without using employees.Add()
             employees = employees.Append(new Employee("Shrividya", "Gopi", 40, 10)).ToList();
 
-            Console.WriteLine();
-
+            Console.WriteLine("-----");
+            foreach (var x in employees)
+            {
+                Console.WriteLine(x.FullName);
+            }
             Console.ReadLine();
         }
+
+           
+        
 
         #region CreateEmployeesMethod
         private static List<Employee> CreateEmployees()
